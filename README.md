@@ -32,13 +32,15 @@ Tools & Technologies
 Python (Pandas, NumPy)
 SQL
 Power BI
+
 GitHub
 Project Links
-GitHub Repository: https://github.com/your-username/Customer-Lifetime-Value-Cohort-Analytics
-Power BI Dashboard File: Ecommerce_performance_analysis.pbix
+GitHub Repository: https://github.com/gurubava200509/Customer-Lifetime-Value-Cohort-Analytics
+Power BI Dashboard File: customer_lifetime_value_dasboard.pbix
 CLV Dashboard Image: clv_dashboard_overview.png
 Cohort Dashboard Image: cohort_retention_analysis.png
-Notebook: eda_customer_lifetime_value.ipynb
+Notebook: clv_analysis.ipynb
+
 Project Files
 eda_customer_lifetime_value.ipynb → Data cleaning, CLV analysis, cohort analysis
 customer_analysis.sql → SQL queries for revenue, customer, and trend analysis
@@ -47,6 +49,7 @@ Ecommerce_performance_analysis.pbix → Power BI dashboard
 clv_dashboard_overview.png → CLV visualization
 cohort_retention_analysis.png → Cohort visualization
 README.md → Project documentation
+
 Data Preparation
 Merged customer, order, and payment datasets using customer_id and order_id
 Ensured proper relational mapping between datasets
@@ -54,6 +57,7 @@ Converted date fields into datetime format
 Handled missing and invalid values
 Aggregated revenue at customer level
 Created cohort groups based on first purchase month
+
 SQL Analysis (Business Queries)
 
 This SQL analysis extracts business insights using joins and aggregations across customers, orders, and payments. It is used to measure revenue performance, customer contribution, and business trends over time.
@@ -113,6 +117,5 @@ Focus on high-value customer segments
 Track cohort performance as a core business KPI
 Implement loyalty and engagement programs
 Conclusion
-This project demonstrates an end-to-end analytics workflow including data preparation, SQL analysis, customer lifetime value modeling, cohort analysis, and dashboard storytelling to generate actionable business insights for improving customer retention and revenue growth.
 
 This project demonstrates an end-to-end analytics workflow including data preparation, SQL analysis, customer lifetime value modeling, cohort analysis, and dashboard storytelling to generate actionable business insights for improving customer retention and revenue growth.
