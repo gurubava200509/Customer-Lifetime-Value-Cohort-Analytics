@@ -1,121 +1,124 @@
-Customer Lifetime Value (CLV) & Cohort Analytics
-Project Overview
+📊 Customer Lifetime Value (CLV) & Cohort Analytics
+🚀 Project Overview
 
-This project analyzes customer purchasing behavior, lifetime value, and retention patterns using Customer Lifetime Value (CLV) and Cohort Analysis.
+This project analyzes customer purchasing behavior to understand lifetime value, retention patterns, and revenue concentration in an e-commerce platform.
 
-The objective is to understand how customers contribute to revenue over time, identify high-value customers, and evaluate retention behavior across different acquisition cohorts.
+The objective is not just analysis, but to identify which customers drive long-term revenue and how retention behavior impacts business growth.
 
-The project uses Python, SQL, and Power BI for end-to-end data analysis and business insight generation.
+Using Python, SQL, and Power BI, raw transactional data is transformed into actionable business insights for customer strategy and retention planning.
 
-Business Problem
+🎯 Business Problem
 
-In e-commerce, most customers do not return after their first purchase, which reduces long-term revenue stability.
+Most e-commerce platforms lose revenue potential due to low repeat purchases.
 
-This project focuses on solving:
+This analysis focuses on:
 
-Which customers generate the highest lifetime revenue?
-How does customer retention behave over time?
-How do different customer cohorts perform long-term?
-What percentage of customers become repeat buyers?
-Dataset Overview
+Identifying high-value customers contributing to long-term revenue
+Understanding customer retention behavior over time
+Evaluating cohort-wise engagement performance
+Measuring dependency on repeat vs one-time buyers
+📌 Key Business Impact
+Revealed high revenue concentration among a small customer segment
+Identified low repeat purchase behavior across majority customers
+Highlighted sharp retention drop after first purchase cycle
+Enabled segmentation strategy for high-LTV customer targeting
+📁 Dataset Overview
 
 Source: Olist Brazilian E-Commerce Dataset
 
-Dataset	Records
+Entity	Volume
 Customers	99,441
 Orders	99,441
 Payments	103,886
 
-Analysis Period: Based on available order timestamps (2016–2018)
+Analysis Period: 2016 – 2018 (based on transaction timestamps)
 
-Tools & Technologies
-Python (Pandas, NumPy)
-SQL
-Power BI
-
-GitHub
-Project Links
-GitHub Repository: https://github.com/gurubava200509/Customer-Lifetime-Value-Cohort-Analytics
-Power BI Dashboard File: customer_lifetime_value_dasboard.pbix
-CLV Dashboard Image: clv_dashboard_overview.png
-Cohort Dashboard Image: cohort_retention_analysis.png
-Notebook: clv_analysis.ipynb
-
-Project Files
-eda_customer_lifetime_value.ipynb → Data cleaning, CLV analysis, cohort analysis
-customer_analysis.sql → SQL queries for revenue, customer, and trend analysis
-orders_final.csv → Final processed dataset
-Ecommerce_performance_analysis.pbix → Power BI dashboard
-clv_dashboard_overview.png → CLV visualization
-cohort_retention_analysis.png → Cohort visualization
-README.md → Project documentation
-
-Data Preparation
-Merged customer, order, and payment datasets using customer_id and order_id
-Ensured proper relational mapping between datasets
-Converted date fields into datetime format
-Handled missing and invalid values
-Aggregated revenue at customer level
+🛠 Tools & Technologies
+Python (Pandas, NumPy) → Data processing & CLV modeling
+SQL → Business querying & aggregation
+Power BI → Dashboard & visualization
+GitHub → Version control & project documentation
+📂 Project Files
+📘 EDA Notebook → Data cleaning, transformation, CLV & cohort analysis
+🧮 SQL Analysis → Revenue, customer, and trend-based queries
+📊 Final Dataset → Processed analytical dataset
+📈 Power BI Dashboard → Business intelligence dashboard
+🖼️ CLV Dashboard →
+🖼️ Cohort Dashboard →
+⚙️ Data Engineering & Preparation
+Merged customer, order, and payment datasets using relational keys (customer_id, order_id)
+Standardized datetime fields for time-based analysis
+Handled missing and inconsistent transaction values
+Aggregated revenue at customer-level granularity
 Created cohort groups based on first purchase month
-
-SQL Analysis (Business Queries)
-
-This SQL analysis extracts business insights using joins and aggregations across customers, orders, and payments. It is used to measure revenue performance, customer contribution, and business trends over time.
-
-Total Revenue
+🧮 SQL Business Analysis
+💰 Total Revenue Analysis
 SELECT ROUND(SUM(payment_value),2) AS total_revenue
 FROM orders_final;
-Top Customers by Revenue
+
+Business Value: Measures overall platform revenue performance.
+
+🧑‍💼 High-Value Customer Identification
 SELECT 
     customer_unique_id,
     SUM(payment_value) AS total_revenue
 FROM orders_final
 GROUP BY customer_unique_id
 ORDER BY total_revenue DESC;
-Monthly Revenue Trend
+
+Business Value: Identifies top revenue-contributing customers for retention strategy.
+
+📈 Monthly Revenue Trend
 SELECT 
     DATE_FORMAT(order_purchase_timestamp,'%Y-%m') AS order_month,
     SUM(payment_value) AS revenue
 FROM orders_final
 GROUP BY order_month
 ORDER BY order_month;
-Customer Lifetime Value (CLV)
+
+Business Value: Tracks revenue growth pattern over time.
+
+💰 Customer Lifetime Value (CLV)
 
 CLV is calculated as:
 
-Total sum of payment_value per customer
+Total revenue generated per customer across all purchases
 
-This helps to identify:
+Key Outcomes:
+Identified high-LTV customer segment
+Measured revenue dependency on repeat customers
+Detected skewed revenue distribution across customer base
+📊 Cohort Analysis
 
-High-value customers
-Repeat buyers
-Revenue concentration patterns
-Long-term customer contribution
-Cohort Analysis
+Customers are grouped based on first purchase month to analyze long-term behavior.
 
-Customers are grouped based on their first purchase month to analyze:
+Key Outcomes:
+Retention drops significantly after first purchase cycle
+Majority cohorts show weak long-term engagement
+Strong cohorts contribute disproportionately to revenue
+📌 Key Business Insights
+Revenue is heavily concentrated among a small percentage of customers
+Most customers do not return after first purchase
+Retention is the strongest driver of lifetime value
+Cohort performance varies significantly by acquisition period
+📈 Business Recommendations
+Focus marketing on high-LTV customer segments
+Improve first-to-second purchase conversion rate
+Build targeted retention campaigns for weak cohorts
+Track cohort retention as a core business KPI
+📊 Dashboard Preview
+CLV Performance Dashboard
 
-Customer retention over time
-Repeat purchase behavior
-Drop-off trends after first purchase
-Long-term engagement patterns
-Dashboard Preview
-CLV Dashboard
+Cohort Retention Dashboard
 
-Cohort Analysis Dashboard
+🧾 Final Outcome
 
-Key Business Insights
-Majority of customers make only one purchase, indicating low retention
-Revenue is highly concentrated among a small group of high-value customers
-Customer retention drops significantly after first purchase
-Strong cohorts show better long-term revenue contribution
-Repeat customers generate higher lifetime value
-Business Recommendations
-Improve customer retention strategies
-Increase second purchase conversion rate
-Focus on high-value customer segments
-Track cohort performance as a core business KPI
-Implement loyalty and engagement programs
-Conclusion
+This project demonstrates an end-to-end customer analytics workflow covering:
 
-This project demonstrates an end-to-end analytics workflow including data preparation, SQL analysis, customer lifetime value modeling, cohort analysis, and dashboard storytelling to generate actionable business insights for improving customer retention and revenue growth.
+Data engineering
+SQL-driven business analysis
+Customer lifetime value modeling
+Cohort-based retention analysis
+Executive-level dashboard storytelling
+
+The outcome is a business-ready customer strategy view, not just technical analysis
