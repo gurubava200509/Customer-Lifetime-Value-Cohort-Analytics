@@ -165,15 +165,13 @@ The analysis highlights an average customer value of ₹165.20 and an average in
 
 ## Project Files
 
-| File | Description |
-|------|-------------|
-| clv_analysis.ipynb | Data cleaning, CLV calculation, cohort creation, RFM segmentation, and retention analysis using Python |
-| customer_analysis.sql | Business-focused SQL queries for revenue, customer value, retention, and segmentation analysis |
-| orders_final.csv | Final analytical dataset used for reporting and dashboard development |
-| rfm_customer_segments.csv | Customer segmentation output containing RFM-based customer groups |
-| customer_lifetime_value_dashboard.pbix | Interactive Power BI dashboard for customer analytics |
-| clv_dashboard_overview.png | Revenue performance and customer segmentation dashboard preview |
-| cohort_retention_analysis.png | Cohort retention and customer insights dashboard preview |
+- [clv_analysis.ipynb](clv_analysis.ipynb) — Data cleaning, CLV calculation, cohort analysis, and RFM segmentation.
+- [customer_analysis.sql](customer_analysis.sql) — SQL business queries for customer value, retention, and revenue analysis.
+- [orders_final.csv](orders_final.csv) — Final analytical dataset used for reporting.
+- [rfm_customer_segments.csv](rfm_customer_segments.csv) — Customer segmentation output dataset.
+- [customer_lifetime_value_dashboard.pbix](customer_lifetime_value_dashboard.pbix) — Interactive Power BI dashboard.
+- [clv_dashboard_overview.png](clv_dashboard_overview.png) — Dashboard preview image.
+- [cohort_retention_analysis.png](cohort_retention_analysis.png) — Cohort retention dashboard preview.
 
 ---
 
