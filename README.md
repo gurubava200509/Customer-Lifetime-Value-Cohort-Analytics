@@ -178,17 +178,16 @@ The analysis highlights an average customer value of ₹165.20 and an average in
 ## Repository Structure
 
 ```text
-Customer-Lifetime-Value-CLV-Cohort-Analytics/
+Customer-Lifetime-Value-Cohort-Analytics/
 │
 ├── README.md
 ├── clv_analysis.ipynb
 ├── clv_dashboard_overview.png
 ├── cohort_retention_analysis.png
-├── customer_lifetime_value_dashboard.pbix
 ├── customer_analysis.sql
+├── customer_lifetime_value_dashboard.pbix
 ├── orders_final.csv
 └── rfm_customer_segments.csv
-```
 
 ---
 
