@@ -201,6 +201,8 @@ https://github.com/gurubava200509/Customer-Lifetime-Value-Cohort-Analytics
 
 ## Conclusion
 
-This project demonstrates a complete customer analytics workflow covering data preparation, SQL analysis, customer lifetime value modeling, RFM segmentation, cohort retention analysis, and Power BI dashboard development.
+## Conclusion
 
-The analysis provides actionable insights into customer behavior, retention performance, revenue concentration, and long-term customer value, enabling data-driven decision-making for sustainable business growth.
+This project demonstrates an end-to-end customer analytics workflow using Python, SQL, and Power BI. Through customer lifetime value modeling, RFM segmentation, cohort retention analysis, and interactive dashboard development, the project evaluates customer behavior, retention performance, and long-term revenue contribution.
+
+The insights generated can support customer retention strategies, customer segmentation initiatives, and data-driven decisions aimed at improving customer lifetime value and business profitability.
