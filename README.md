@@ -188,6 +188,7 @@ Customer-Lifetime-Value-CLV-Cohort-Analytics/
 ├── customer_analysis.sql
 ├── orders_final.csv
 └── rfm_customer_segments.csv
+```
 
 ---
 
@@ -198,8 +199,6 @@ GitHub Repository:
 https://github.com/gurubava200509/Customer-Lifetime-Value-Cohort-Analytics
 
 ---
-
-## Conclusion
 
 ## Conclusion
 
