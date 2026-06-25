@@ -1,4 +1,4 @@
--- 1. BASIC KPIs
+-- BASIC KPIs
 
 SELECT
     COUNT(DISTINCT order_id) AS total_orders,
@@ -6,7 +6,7 @@ SELECT
     ROUND(AVG(payment_value), 2) AS avg_order_value
 FROM orders;
 
--- 2. MONTHLY REVENUE TREND
+-- MONTHLY REVENUE TREND
 
 SELECT
     DATE_FORMAT(order_purchase_timestamp, '%Y-%m') AS month,
@@ -16,7 +16,7 @@ FROM orders
 GROUP BY month
 ORDER BY month;
 
--- 3. TOP CUSTOMERS
+-- TOP CUSTOMERS
 
 SELECT
     customer_unique_id,
@@ -27,7 +27,7 @@ GROUP BY customer_unique_id
 ORDER BY total_spent DESC
 LIMIT 10;
 
--- 4. REVENUE BY STATE
+-- REVENUE BY STATE
 
 SELECT
     customer_state,
@@ -37,7 +37,7 @@ FROM orders
 GROUP BY customer_state
 ORDER BY revenue DESC;
 
--- 5. TOP CITIES
+-- TOP CITIES
 
 SELECT
     customer_city,
@@ -48,7 +48,7 @@ GROUP BY customer_city
 ORDER BY revenue DESC
 LIMIT 10;
 
--- 6. REPEAT CUSTOMERS
+-- REPEAT CUSTOMERS
 
 SELECT
     customer_unique_id,
@@ -58,7 +58,7 @@ GROUP BY customer_unique_id
 HAVING COUNT(order_id) > 1
 ORDER BY frequency DESC;
 
--- 7. ORDER STATUS DISTRIBUTION
+-- ORDER STATUS DISTRIBUTION
 
 SELECT
     order_status,
@@ -67,7 +67,7 @@ FROM orders
 GROUP BY order_status
 ORDER BY total_orders DESC;
 
--- 8. REVENUE BY STATUS
+-- REVENUE BY STATUS
 
 SELECT
     order_status,
@@ -77,21 +77,21 @@ FROM orders
 GROUP BY order_status
 ORDER BY revenue DESC;
 
--- 9. DELIVERY TIME ANALYSIS
+-- DELIVERY TIME ANALYSIS
 
 SELECT
     AVG(DATEDIFF(order_delivered_customer_date, order_purchase_timestamp)) AS avg_delivery_days
 FROM orders
 WHERE order_delivered_customer_date IS NOT NULL;
 
--- 10. DELAYED ORDERS
+-- DELAYED ORDERS
 
 SELECT
     COUNT(*) AS delayed_orders
 FROM orders
 WHERE order_delivered_customer_date > order_estimated_delivery_date;
 
--- 11. CUSTOMER LIFETIME VALUE (CLV)
+-- CUSTOMER LIFETIME VALUE (CLV)
 
 SELECT
     customer_unique_id,
@@ -101,7 +101,7 @@ FROM orders
 GROUP BY customer_unique_id
 ORDER BY lifetime_value DESC;
 
--- 12. HIGH VALUE CUSTOMERS
+-- HIGH VALUE CUSTOMERS
 
 SELECT
     customer_unique_id,
@@ -111,7 +111,7 @@ GROUP BY customer_unique_id
 ORDER BY total_spent DESC
 LIMIT 20;
 
--- 13. MONTHLY CUSTOMER GROWTH
+-- MONTHLY CUSTOMER GROWTH
 
 SELECT
     DATE_FORMAT(order_purchase_timestamp, '%Y-%m') AS month,
@@ -120,7 +120,7 @@ FROM orders
 GROUP BY month
 ORDER BY month;
 
--- 14. AVERAGE ORDER VALUE BY STATUS
+-- AVERAGE ORDER VALUE BY STATUS
 
 SELECT
     order_status,
@@ -128,7 +128,7 @@ SELECT
 FROM orders
 GROUP BY order_status;
 
--- 15. RFM BASE DATA
+-- RFM BASE DATA
 
 SELECT
     customer_unique_id,
